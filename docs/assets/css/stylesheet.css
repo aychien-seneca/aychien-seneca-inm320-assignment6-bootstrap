@@ -10809,6 +10809,7 @@ main > section .article section .overview section h5, main > section .article se
   display: none;
 }
 main > section .article section .numbers {
+  cursor: pointer;
   margin-bottom: 30px;
 }
 main > section .article section .numbers section section {
