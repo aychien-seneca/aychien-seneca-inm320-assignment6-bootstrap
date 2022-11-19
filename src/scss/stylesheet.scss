@@ -279,6 +279,7 @@ main {
                             }
                         }
                     }
+                    // unsolved ticket + task
                     .tickettask{
                         section {
                             .split{
@@ -364,37 +365,45 @@ main {
                             }
                         }
                     }
+                    // unresolved + overdue + open + on hold
                     .numbers {
                         section{
                             section{
                                 max-width: calc((100% - 90px) / 4);
+                                 // unresolved + overdue + open + on hold
                                 h3{
                                     font-size:80%;
                                 }
                             }
                         }
                     }
+                    // today's trends + as of 25 May 2019, 09:41 pm + graph img + resolved + received + average X2 + resolution within sla
                     .chart {
                         section {
                             section{
                                 section{
                                     padding:0;
+                                    // today's trends
                                     h3{
                                         padding: 32px 0 0 32px;
                                     }
+                                    // as of 25 May 2019, 09:41 pm
                                     h6{
-                                            padding: 8px 0 0 32px; 
+                                        padding: 8px 0 0 32px; 
                                     }
+                                    // graph img
                                     img{
                                         max-width: 100%;
-                                        padding:0 32px 0 32px;
+                                        padding:0 32px 0 0;
                                     }
                                         &:last-child{
                                         padding:0 32px 32px 32px;
                                         }                            
                                 }
+                                // resolved + received + average X2 + resolution within sla
                                 div{
                                     padding: 16px;
+                                    // resolved + received + average X2 + resolution within sla
                                     h4 {
                                         font-size: 85%;
                                     }
@@ -418,9 +427,11 @@ main {
             // overview content - exluding the side navigation
             .article{
                 section{
+                    // unresolved + overdue + open + on hold
                     .numbers {
                         section{
                             section{
+                                // unresolved + overdue + open + on hold
                                 h3{
                                     font-size:100%;
                                 }
@@ -432,43 +443,39 @@ main {
                             }
                         }
                     }
+                    // today's trends + as of 25 May 2019, 09:41 pm + graph img + resolved + received + average X2 + resolution within sla
                     .chart {
                         height: 546px;
                         section {
                             section{
-                                section{
-                                    img{
-                                        max-width: 100%;
-                                        padding:0 32px 0 32px;
-                                    }
-                                        &:last-child{
-                                        padding:0 32px 32px 32px;
-                                        }                
-                                }     
+                                // resolved + received + average X2 + resolution within sla
                                 div{
                                     height: 20%;
+                                    // resolved + received + average X2 + resolution within sla
                                     h4 {
                                         font-size: 100%;
                                     }
                                 }                  
                             }
+                            // line divider between the graph and data
                             .frame{
                                 border-left: 1px solid $secondary;
                             }
                         }
                     }
+                    // unsolved ticket + task
                     .tickettask{
                         section {
                             .split{
                                 max-width: calc((100% - 30px) / 2);
-                            }
-                            .split:last-child{
-                                margin-top: 0;
+                                // spacing between top & bottom row
+                                &:last-child{
+                                    margin-top: 0;
+                                }
                             }
                         }
                     }
                 }
-                
             }
         }
     }

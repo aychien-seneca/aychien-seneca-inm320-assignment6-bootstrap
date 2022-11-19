@@ -10995,7 +10995,7 @@ main > section .article section .tickettask section .split section h5, main > se
   }
   main > section .article section .chart section section section img {
     max-width: 100%;
-    padding: 0 32px 0 32px;
+    padding: 0 32px 0 0;
   }
   main > section .article section .chart section section section:last-child {
     padding: 0 32px 32px 32px;
@@ -11018,13 +11018,6 @@ main > section .article section .tickettask section .split section h5, main > se
   }
   main > section .article section .chart {
     height: 546px;
-  }
-  main > section .article section .chart section section section img {
-    max-width: 100%;
-    padding: 0 32px 0 32px;
-  }
-  main > section .article section .chart section section section:last-child {
-    padding: 0 32px 32px 32px;
   }
   main > section .article section .chart section section div {
     height: 20%;
