@@ -1,0 +1,21 @@
+{
+  "name": "a6-bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "server": "lite-server --baseDir=\"docs\"",
+    "cssprecompiler": "sass --watch src/scss:docs/assets/css",
+    "start": "concurrently \"npm run cssprecompiler\" \"npm run server\""
+  },
+  "author": "",
+  "license": "private",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "lite-server": "^2.6.1",
+    "sass": "^1.55.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
+}
