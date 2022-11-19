@@ -10902,6 +10902,10 @@ main > section .article section .tickettask section .split section section h3, m
 main > section .article section .tickettask section .split section section h5, main > section .article section .tickettask section .split section section .h5 {
   color: #3751FF;
 }
+main > section .article section .tickettask section .split section section h6, main > section .article section .tickettask section .split section section .h6 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
 main > section .article section .tickettask section .split section h6, main > section .article section .tickettask section .split section .h6 {
   letter-spacing: 0.1px;
 }
@@ -10912,6 +10916,15 @@ main > section .article section .tickettask section .split section h6 span, main
 main > section .article section .tickettask section .split section h5, main > section .article section .tickettask section .split section .h5 {
   font-weight: 600;
   letter-spacing: 0.2px;
+}
+main > section .article section .tickettask section .split section .color-grey {
+  background-color: #F0F1F7;
+}
+main > section .article section .tickettask section .split section .color-yellow {
+  background-color: #FEC400;
+}
+main > section .article section .tickettask section .split section .color-green {
+  background-color: #29CC97;
 }
 
 @media only screen and (min-width: 576px) {

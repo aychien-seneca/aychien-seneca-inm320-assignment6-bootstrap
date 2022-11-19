@@ -31,6 +31,7 @@ $sub-title-color: #4B506D;
 
 // letter-spacing 
 $letter-spacing-10: 1px;
+$letter-spacing-05: 0.5px;
 $letter-spacing-04: 0.4px;
 $letter-spacing-03: 0.3px;
 $letter-spacing-02: 0.2px;
@@ -225,6 +226,10 @@ main {
                                     h5{
                                         color: $highlighted-light-color;
                                     }
+                                    h6{
+                                        font-weight: $font-weight-semibold;
+                                        letter-spacing: $letter-spacing-05;
+                                    }
                                 }
                                 h6{
                                     letter-spacing: $letter-spacing-01;
@@ -236,6 +241,15 @@ main {
                                 h5{
                                     font-weight: $font-weight-semibold;
                                     letter-spacing: $letter-spacing-02;
+                                }
+                                .color-grey{
+                                    background-color: #F0F1F7;
+                                }
+                                .color-yellow{
+                                    background-color: #FEC400;
+                                }
+                                .color-green{
+                                    background-color: #29CC97;
                                 }
                             }
                         }
