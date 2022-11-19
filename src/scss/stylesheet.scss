@@ -29,6 +29,11 @@ $highlighted-light-color: #3751FF;
 // sub-title color
 $sub-title-color: #4B506D;
 
+// button-bg color
+$button-bg-color-grey: #F0F1F7;
+$button-bg-color-yellow: #FEC400;
+$button-bg-color-green: #29CC97;
+
 // letter-spacing 
 $letter-spacing-10: 1px;
 $letter-spacing-05: 0.5px;
@@ -243,13 +248,13 @@ main {
                                     letter-spacing: $letter-spacing-02;
                                 }
                                 .color-grey{
-                                    background-color: #F0F1F7;
+                                    background-color: $button-bg-color-grey;
                                 }
                                 .color-yellow{
-                                    background-color: #FEC400;
+                                    background-color: $button-bg-color-yellow;
                                 }
                                 .color-green{
-                                    background-color: #29CC97;
+                                    background-color: $button-bg-color-green;
                                 }
                             }
                         }
