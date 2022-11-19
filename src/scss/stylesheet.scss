@@ -231,6 +231,7 @@ main {
                                     }
                                     h5{
                                         color: $highlighted-light-color;
+                                        cursor: pointer;
                                     }
                                     h6{
                                         font-weight: $font-weight-semibold;
@@ -427,8 +428,7 @@ main {
                                     h4 {
                                         font-size: 85%;
                                     }
-                                }
-                               
+                                } 
                             }
                         }
                     }

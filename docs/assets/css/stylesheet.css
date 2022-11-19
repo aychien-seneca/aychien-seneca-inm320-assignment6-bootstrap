@@ -10902,6 +10902,7 @@ main > section .article section .tickettask section .split section section h3, m
 }
 main > section .article section .tickettask section .split section section h5, main > section .article section .tickettask section .split section section .h5 {
   color: #3751FF;
+  cursor: pointer;
 }
 main > section .article section .tickettask section .split section section h6, main > section .article section .tickettask section .split section section .h6 {
   font-weight: 600;
