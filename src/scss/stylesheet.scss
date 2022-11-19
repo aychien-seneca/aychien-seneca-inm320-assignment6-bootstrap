@@ -17,52 +17,56 @@ $h4-font-size: 16px;
 $h5-font-size: 14px;           
 $h6-font-size: 12px;    
 
-
-// $display-font-sizes: map-merge($custom-font, $display-font-sizes);
-
-
 // Then import Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+// css precompiler - scss
+// variables
+
+// hover-indication color
+$highlighted-light-color: #3751FF;
+
+// sub-title color
+$sub-title-color: #4B506D;
+
+// letter-spacing 
+$letter-spacing-10: 1px;
+$letter-spacing-04: 0.4px;
+$letter-spacing-03: 0.3px;
+$letter-spacing-02: 0.2px;
+$letter-spacing-01: 0.1px;
 
 main {
-    > section {
+    & > section {
         height: 100vh;
+        // side navigation - icons + text
         aside{
             ul{
                 li{
+                    // dashboard kit
                     .dashboard {
                         margin-top:37px;
                         margin-bottom: 43px;
-                        // padding-left: 32px;
                         section {
                             max-height: 32px;
                             max-width: 32px;
-                            // margin-right: 12px;
                         }
                         img {
                             max-height: 24px;
                             max-width: 24px;
                         }
                         h3{
-                            // font-weight:$font-weight-bold;
-                            // letter-spacing:0.4;
                             display:none;
                         }
                     }
                 }
             }
+            // Tickets / Ideas / Contacts / Agents / Articlce / Setting / Subscription
             .navlist {
                 padding: 16px 0;
                 li {
-                    // section{
-                        // position:absolute;
-                        // width: 3px;
-                        // height: 56px;
-                     //}
                     a{
                         height:56px;
-                        // margin:0 32px;
                         h4{
                             display:none;
                         }
@@ -70,47 +74,41 @@ main {
                 }
             }
         }
+        // overview content - exluding the side navigation
         .article{
             padding:30px;
             section{
+                // header - overview + search + notification + profile name + profile
                 .overview {
                     max-height: 44px;
                     margin-bottom:30px;
+                    // overview
                     header{
-                        // width:100%;
                         h2{
                             font-weight:$font-weight-bold;
-                            letter-spacing: 0.3px;
+                            letter-spacing: $letter-spacing-03;
                         }
                     }
+                    // search + notification + profile name + profile
                     section{
                         img {
                             max-width: 16px;
                             max-height:16px;
-                            // margin-left:24px;
                             margin-left: 14px;
-                        }
-                        img:nth-child(2){
+                            &:nth-child(2){
                             display:none;
-                        }
-                        h5{
-                            // padding: 7px 0 7px 32px;
-                            // margin-left:32px;
-                            // font-weight: $font-weight-semibold;
-                            // letter-spacing: 0.2px;
-                            // border-left: 1px solid $secondary;
-                            // line-height:20px;
-                            display: none;
-                        }
-
-                        img:last-child {
+                            }
+                            &:last-child {
                             max-width: 44px;
                             max-height:44px;
-                            // margin-left: 14px;
+                            }
+                        }
+                        h5{
+                            display: none;
                         }
                     }
                 }
-
+                // unresolved + overdue + open + on hold
                 .numbers {
                     margin-bottom:30px;
                     section{
@@ -118,20 +116,23 @@ main {
                             position:relative;
                             max-width: calc((100% - 15px) / 2);
                             height: 134px;
+                            // unresolved + overdue + open + on hold
                             h3{
                                 font-size:95%;
                                 font-weight: $font-weight-bold;
-                                letter-spacing: 0.4px;
-                                // padding-top:24px;
+                                letter-spacing: $letter-spacing-04;
                             }
+                            // 60 + 16 + 43 + 64 
                             h1{
                                 padding: 12px 0 0;
                                 font-weight: $font-weight-bold;
-                                letter-spacing: 1px;
+                                letter-spacing: $letter-spacing-10;
                             }
+                            // Overdue + 16
                             .color{
-                                color: #3751FF;
+                                color: $highlighted-light-color;
                             }
+                            // cursor
                             img{
                                 position: absolute;
                                 bottom:16px;
@@ -139,108 +140,104 @@ main {
                             }
                         }
                         .border-color{
-                            border: 1px solid #3751FF;
+                            border: 1px solid $highlighted-light-color;
                         }
-
+                        // spacing between top & bottom row
                         .bottom{
                             margin-top: 15px;
                         }
                     }
                 }
+                // today's trends + as of 25 May 2019, 09:41 pm + graph img + resolved + received + average X2 + resolution within sla
                 .chart {
-                    // height: 546px;
                     margin-bottom: 30px;
                     section {
                         section{
+                            // today's trends + as of 25 May 2019, 09:41 pm + graph img
                             section{
                                 padding: 16px 16px 0 16px;
+                                // today's trends
                                 h3{
                                     padding: 16px 16px 0 15px;
                                     font-weight:$font-weight-bold;
-                                    letter-spacing: 0.3px;
-                                    // padding: 35px 0 0 35px;
-                                    + h6{
-                                        // padding-left: 35px;
-                                        padding: 8px 16px 0;
-                                        letter-spacing: 0.1px;
-                                    }
+                                    letter-spacing: $letter-spacing-03;
                                 }
+                                // as of 25 May 2019, 09:41 pm
+                                h6{
+                                    padding: 8px 16px 0;
+                                    letter-spacing: $letter-spacing-01;
+                                }
+                                // graph img
                                 img{
                                     max-width: 100%;
-                                    // padding:0 62px 0 32px;
+                                    &:first-child{
+                                        max-width:80%;
+                                    }
+                                    &:last-child{
+                                        padding:4px 0 16px;
+                                    }   
                                 }
-                                img:first-child{
-                                    max-width:80%;
-                                }
-                                img:last-child{
-                                    // padding-bottom: 32px;
-                                    padding:4px 0 16px;
-                                }                            
                             }
+                            // resolved + received + average X2 + resolution within sla
                             div{
                                 padding:16px;
-                                // height: 30%;
+                                // resolved + received + average X2 + resolution within sla
                                 h4 {
                                     font-size: 85%;
                                     font-weight: $font-weight-semibold;
-                                    letter-spacing: 0.3px;
+                                    letter-spacing: $letter-spacing-03;
                                 }
+                                // 449 + 426 + 33m + 3h 8m + 94%
                                 h2{
-                                    // font-size: 90;
                                     font-weight:$font-weight-bold;
-                                    letter-spacing: 0.3px;  
+                                    letter-spacing: $letter-spacing-03;  
                                     padding-top: 6px;
                                 }
                             }
-                           
-                        }
-                        + section{
-                            border-left: 1px solid $secondary;
-
                         }
                     }
                 }
+                // unsolved ticket + task
                 .tickettask{
                     section {
                         .split{
-                            // height: 336px;
-                            // max-width: calc((100% - 30px) / 2);
                             padding: 32px 32px 8px 32px;
+                            // spacing between top & bottom row
+                            &:last-child{
+                                margin-top: 30px;
+                            }
                             section{
                                 height:58px;
+                                // unresolved ticket + view details + gropu:support + tasks + view all + today
+                                &:first-child{
+                                    height: auto;
+                                }
+                                // list of data + numbers + todo + button
+                                &:nth-child(2){
+                                    margin-top: 16px;
+                                }
                                 section{
                                     margin-bottom: 8px;
                                     h3{
                                         font-weight:$font-weight-bold;
-                                        letter-spacing: 0.4px;
+                                        letter-spacing: $letter-spacing-04;
                                     }
                                     h5{
-                                        // font-weight: $font-weight-semibold;
-                                        // letter-spacing: 0.2px;
-                                        color: #3751FF;
+                                        color: $highlighted-light-color;
                                     }
                                 }
                                 h6{
-                                    letter-spacing: 0.1px;
+                                    letter-spacing: $letter-spacing-01;
                                     span {
                                         font-weight: $font-weight-semibold;
-                                        color: #4B506D;
+                                        color: $sub-title-color;
                                     }
                                 }
                                 h5{
                                     font-weight: $font-weight-semibold;
-                                    letter-spacing: 0.2px;
+                                    letter-spacing: $letter-spacing-02;
                                 }
                             }
-                            section:first-child{
-                                height: auto;
-                            }
-                            section:nth-child(2){
-                                margin-top: 16px;
-                            }
-                        }
-                        .split:last-child{
-                            margin-top: 30px;
                         }
                     }
                 }
@@ -249,113 +246,43 @@ main {
     }
 }
 
+// break points sm: 576px,
 @media only screen and (min-width: 576px) {
 
     main {
-        > section {
+        & > section {
+            // overview content - exluding the side navigation
             .article{
                 section{
+                    // header - overview + search + notification + profile name + profile
                     .overview {
+                        // search + notification + profile name + profile
                         section{
                             img:nth-child(2){
                                 display:block;
                             }
                         }
                     }
+                    // unresolved + overdue + open + on hold
                     .numbers {
                         section{
                             section{
                                 max-width: calc((100% - 50px) / 4);
+                                // unresolved + overdue + open + on hold
                                 h3{
                                     font-size:97%;
                                 }
                             }
+                            // spacing between top & bottom row
                             .bottom{
                                 margin-top: 0;
                             }
                         }
                     }
-                     // .chart {
-                    //     height: 546px;
-                    //     margin-bottom: 30px;
-                    //     section {
-                    //         section{
-                    //             section{
-                    //                 h3{
-                    //                     padding: 35px 0 0 35px;
-                    //                     + p{
-                    //                         padding-left: 35px;
-                    //                     }
-                    //                 }
-                    //                 img{
-                    //                     max-width: 100%;
-                    //                     padding:0 62px 0 32px;
-                    //                 }
-                    //                 img:last-child{
-                    //                     padding-bottom: 32px;
-                    //                 }                            
-                    //             }
-                    //             div{
-                    //                 height: 20%;
-                    //                 h4 {
-                    //                     font-weight: $font-weight-semibold;
-                    //                     letter-spacing: 0.3px;
-                    //                 }
-                    //                 h2{
-                    //                     font-weight:$font-weight-bold;
-                    //                     letter-spacing: 0.3px;  
-                    //                     padding-top: 6px;
-                    //                 }
-                    //             }
-                               
-                    //         }
-                    //         + section{
-                    //             border-left: 1px solid $secondary;
-
-                    //         }
-                    //     }
-                    // }
                     .tickettask{
                         section {
                             .split{
                                 height: 336px;
-                                // max-width: calc((100% - 30px) / 2);
-                            //     padding: 32px 32px 8px 32px;
-                            //     section{
-                            //         height:58px;
-                            //         section{
-                            //             margin-bottom: 8px;
-                            //             h3{
-                            //                 font-weight:$font-weight-bold;
-                            //                 letter-spacing: 0.4px;
-                            //             }
-                            //             h5{
-                            //                 // font-weight: $font-weight-semibold;
-                            //                 // letter-spacing: 0.2px;
-                            //                 color: #3751FF;
-                            //             }
-                            //         }
-                            //         h6{
-                            //             letter-spacing: 0.1px;
-                            //             span {
-                            //                 font-weight: $font-weight-semibold;
-                            //                 color: #4B506D;
-                            //             }
-                            //         }
-                            //         h5{
-                            //             font-weight: $font-weight-semibold;
-                            //             letter-spacing: 0.2px;
-                            //         }
-                            //     }
-                            //     section:first-child{
-                            //         height: auto;
-                            //     }
-                            //     section:nth-child(2){
-                            //         margin-top: 16px;
-                            //     }
-                            // }
-                            // .split:last-child{
-                            //     margin-top: 30px;
                             }
                         }
                     }
@@ -363,25 +290,23 @@ main {
             }
         }
     }
+
 }
 
-
-
-
+// breakpoints md: 768px,
 @media only screen and (min-width: 768px) {
+
     main {
-        > section {
+        & > section {
             height: 100vh;
+            // side navigation - icons + text
             aside{
                 ul{
                     li{
+                        // dashboard kit
                         .dashboard {
-                            // margin-top:37px;
-                            // margin-bottom: 43px;
                             padding-left: 32px;
                             section {
-                                // height: 32px;
-                                // width: 32px;
                                 margin-right: 12px;
                             }
                             img {
@@ -391,13 +316,13 @@ main {
                             h3{
                                 display:block;
                                 font-weight:$font-weight-bold;
-                                letter-spacing: 0.4px;
+                                letter-spacing: $letter-spacing-04;
                             }
                         }
                     }
                 }
+                // Tickets / Ideas / Contacts / Agents / Articlce / Setting / Subscription
                 .navlist {
-                    // padding: 16px 0;
                     li {
                         section{
                             position:absolute;
@@ -405,155 +330,79 @@ main {
                             height: 56px;
                         }
                         a{
-                            // height:56px;
                             margin:0 32px;
                             h4{
                                 display:block;
                                 padding-left:24px;
-                                letter-spacing: 0.2px;
+                                letter-spacing: $letter-spacing-02;
                             }
                         }
                     }
                 }
             }
+            // overview content - exluding the side navigation
             .article{
-                // padding:30px;
                 section{
+                    // header - overview + search + notification + profile name + profile
                     .overview {
-                        header{
-                            // width:100%;
-                            h2{
-                                // font-weight:$font-weight-bold;
-                                // letter-spacing: 0.3px;
-                            }
-                        }
+                        // search + notification + profile name + profile
                         section{
                             img {
-                                // max-width: 16px;
-                                // max-height:16px;
                                 margin-left:24px;
+                                &:last-child {
+                                    margin-left: 14px;
+                                }
                             }
                             h5{
                                 display: block;
                                 padding: 7px 0 7px 32px;
                                 margin-left:32px;
                                 font-weight: $font-weight-semibold;
-                                letter-spacing: 0.2px;
+                                letter-spacing: $letter-spacing-02;
                                 border-left: 1px solid $secondary;
                                 line-height:20px;
-                            }
-                            img:last-child {
-                                // max-width: 44px;
-                                // max-height:44px;
-                                margin-left: 14px;
                             }
                         }
                     }
                     .numbers {
-                        // margin-bottom:30px;
                         section{
                             section{
                                 max-width: calc((100% - 90px) / 4);
                                 h3{
                                     font-size:80%;
                                 }
-                                // img{
-                                //     position: absolute;
-                                //     bottom:16px;
-                                //     right:32px;
-                                // }
                             }
                         }
                     }
                     .chart {
-                        // height: 546px;
-                        // margin-bottom: 30px;
                         section {
                             section{
                                 section{
                                     padding:0;
                                     h3{
                                         padding: 32px 0 0 32px;
-                                        + h6{
+                                    }
+                                    h6{
                                             padding: 8px 0 0 32px; 
-                                        }
                                     }
                                     img{
                                         max-width: 100%;
                                         padding:0 32px 0 32px;
                                     }
-                                    img:last-child{
-                                        // padding:4px 0 32px;
+                                        &:last-child{
                                         padding:0 32px 32px 32px;
-                                    }                            
+                                        }                            
                                 }
                                 div{
                                     padding: 16px;
-                                    // height: 20%;
                                     h4 {
                                         font-size: 85%;
-                                        // font-weight: $font-weight-semibold;
-                                        // letter-spacing: 0.3px;
-                                    }
-                                    h2{
-                                        // font-size: 90%;
-                                        // font-weight:$font-weight-bold;
-                                        // letter-spacing: 0.3px;  
-                                        // padding-top: 6px;
                                     }
                                 }
                                
                             }
-                            // + section{
-                            //     border-left: 1px solid $secondary;
-
-                            // }
                         }
                     }
-                    // .tickettask{
-                    //     section {
-                    //         .split{
-                    //             height: 336px;
-                    //             // max-width: calc((100% - 30px) / 2);
-                    //             padding: 32px 32px 8px 32px;
-                    //             section{
-                    //                 height:58px;
-                    //                 section{
-                    //                     margin-bottom: 8px;
-                    //                     h3{
-                    //                         font-weight:$font-weight-bold;
-                    //                         letter-spacing: 0.4px;
-                    //                     }
-                    //                     h5{
-                    //                         // font-weight: $font-weight-semibold;
-                    //                         // letter-spacing: 0.2px;
-                    //                         color: #3751FF;
-                    //                     }
-                    //                 }
-                    //                 h6{
-                    //                     letter-spacing: 0.1px;
-                    //                     span {
-                    //                         font-weight: $font-weight-semibold;
-                    //                         color: #4B506D;
-                    //                     }
-                    //                 }
-                    //                 h5{
-                    //                     font-weight: $font-weight-semibold;
-                    //                     letter-spacing: 0.2px;
-                    //                 }
-                    //             }
-                    //             section:first-child{
-                    //                 height: auto;
-                    //             }
-                    //             section:nth-child(2){
-                    //                 margin-top: 16px;
-                    //             }
-                    //         }
-                    //         .split:last-child{
-                    //             margin-top: 30px;
-                    //         }
-                    //     }
-                    // }
                 }
             }
         }
@@ -561,10 +410,12 @@ main {
 
 }
 
+// breakpoints lg:992px
 @media only screen and (min-width: 992px) {
 
     main {
-        > section {
+        & > section {
+            // overview content - exluding the side navigation
             .article{
                 section{
                     .numbers {
@@ -583,7 +434,6 @@ main {
                     }
                     .chart {
                         height: 546px;
-                        // margin-bottom: 30px;
                         section {
                             section{
                                 section{
@@ -591,20 +441,19 @@ main {
                                         max-width: 100%;
                                         padding:0 32px 0 32px;
                                     }
-                                    img:last-child{
-                                        // padding:4px 0 32px;
+                                        &:last-child{
                                         padding:0 32px 32px 32px;
-                                    } 
-                                                       
+                                        }                
                                 }     
                                 div{
                                     height: 20%;
                                     h4 {
                                         font-size: 100%;
-                                        // font-weight: $font-weight-semibold;
-                                        // letter-spacing: 0.3px;
                                     }
                                 }                  
+                            }
+                            .frame{
+                                border-left: 1px solid $secondary;
                             }
                         }
                     }
@@ -612,39 +461,6 @@ main {
                         section {
                             .split{
                                 max-width: calc((100% - 30px) / 2);
-                                // padding: 32px 32px 8px 32px;
-                                // section{
-                                //     height:58px;
-                                //     section{
-                                //         margin-bottom: 8px;
-                                //         h3{
-                                //             font-weight:$font-weight-bold;
-                                //             letter-spacing: 0.4px;
-                                //         }
-                                //         h5{
-                                //             // font-weight: $font-weight-semibold;
-                                //             // letter-spacing: 0.2px;
-                                //             color: #3751FF;
-                                //         }
-                                //     }
-                                //     h6{
-                                //         letter-spacing: 0.1px;
-                                //         span {
-                                //             font-weight: $font-weight-semibold;
-                                //             color: #4B506D;
-                                //         }
-                                //     }
-                                //     h5{
-                                //         font-weight: $font-weight-semibold;
-                                //         letter-spacing: 0.2px;
-                                //     }
-                                // }
-                                // section:first-child{
-                                //     height: auto;
-                                // }
-                                // section:nth-child(2){
-                                //     margin-top: 16px;
-                                // }
                             }
                             .split:last-child{
                                 margin-top: 0;
@@ -656,6 +472,7 @@ main {
             }
         }
     }
+
 }
 
 

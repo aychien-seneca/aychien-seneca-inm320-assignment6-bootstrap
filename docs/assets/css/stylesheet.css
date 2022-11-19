@@ -10801,12 +10801,12 @@ main > section .article section .overview section img {
 main > section .article section .overview section img:nth-child(2) {
   display: none;
 }
-main > section .article section .overview section h5, main > section .article section .overview section .h5 {
-  display: none;
-}
 main > section .article section .overview section img:last-child {
   max-width: 44px;
   max-height: 44px;
+}
+main > section .article section .overview section h5, main > section .article section .overview section .h5 {
+  display: none;
 }
 main > section .article section .numbers {
   margin-bottom: 30px;
@@ -10851,7 +10851,7 @@ main > section .article section .chart section section section h3, main > sectio
   font-weight: 700;
   letter-spacing: 0.3px;
 }
-main > section .article section .chart section section section h3 + h6, main > section .article section .chart section section section .h3 + h6, main > section .article section .chart section section section h3 + .h6, main > section .article section .chart section section section .h3 + .h6 {
+main > section .article section .chart section section section h6, main > section .article section .chart section section section .h6 {
   padding: 8px 16px 0;
   letter-spacing: 0.1px;
 }
@@ -10877,14 +10877,20 @@ main > section .article section .chart section section div h2, main > section .a
   letter-spacing: 0.3px;
   padding-top: 6px;
 }
-main > section .article section .chart section + section {
-  border-left: 1px solid #DFE0EB;
-}
 main > section .article section .tickettask section .split {
   padding: 32px 32px 8px 32px;
 }
+main > section .article section .tickettask section .split:last-child {
+  margin-top: 30px;
+}
 main > section .article section .tickettask section .split section {
   height: 58px;
+}
+main > section .article section .tickettask section .split section:first-child {
+  height: auto;
+}
+main > section .article section .tickettask section .split section:nth-child(2) {
+  margin-top: 16px;
 }
 main > section .article section .tickettask section .split section section {
   margin-bottom: 8px;
@@ -10906,15 +10912,6 @@ main > section .article section .tickettask section .split section h6 span, main
 main > section .article section .tickettask section .split section h5, main > section .article section .tickettask section .split section .h5 {
   font-weight: 600;
   letter-spacing: 0.2px;
-}
-main > section .article section .tickettask section .split section:first-child {
-  height: auto;
-}
-main > section .article section .tickettask section .split section:nth-child(2) {
-  margin-top: 16px;
-}
-main > section .article section .tickettask section .split:last-child {
-  margin-top: 30px;
 }
 
 @media only screen and (min-width: 576px) {
@@ -10969,6 +10966,9 @@ main > section .article section .tickettask section .split:last-child {
   main > section .article section .overview section img {
     margin-left: 24px;
   }
+  main > section .article section .overview section img:last-child {
+    margin-left: 14px;
+  }
   main > section .article section .overview section h5, main > section .article section .overview section .h5 {
     display: block;
     padding: 7px 0 7px 32px;
@@ -10977,9 +10977,6 @@ main > section .article section .tickettask section .split:last-child {
     letter-spacing: 0.2px;
     border-left: 1px solid #DFE0EB;
     line-height: 20px;
-  }
-  main > section .article section .overview section img:last-child {
-    margin-left: 14px;
   }
   main > section .article section .numbers section section {
     max-width: calc((100% - 90px) / 4);
@@ -10993,14 +10990,14 @@ main > section .article section .tickettask section .split:last-child {
   main > section .article section .chart section section section h3, main > section .article section .chart section section section .h3 {
     padding: 32px 0 0 32px;
   }
-  main > section .article section .chart section section section h3 + h6, main > section .article section .chart section section section .h3 + h6, main > section .article section .chart section section section h3 + .h6, main > section .article section .chart section section section .h3 + .h6 {
+  main > section .article section .chart section section section h6, main > section .article section .chart section section section .h6 {
     padding: 8px 0 0 32px;
   }
   main > section .article section .chart section section section img {
     max-width: 100%;
     padding: 0 32px 0 32px;
   }
-  main > section .article section .chart section section section img:last-child {
+  main > section .article section .chart section section section:last-child {
     padding: 0 32px 32px 32px;
   }
   main > section .article section .chart section section div {
@@ -11026,7 +11023,7 @@ main > section .article section .tickettask section .split:last-child {
     max-width: 100%;
     padding: 0 32px 0 32px;
   }
-  main > section .article section .chart section section section img:last-child {
+  main > section .article section .chart section section section:last-child {
     padding: 0 32px 32px 32px;
   }
   main > section .article section .chart section section div {
@@ -11034,6 +11031,9 @@ main > section .article section .tickettask section .split:last-child {
   }
   main > section .article section .chart section section div h4, main > section .article section .chart section section div .h4 {
     font-size: 100%;
+  }
+  main > section .article section .chart section .frame {
+    border-left: 1px solid #DFE0EB;
   }
   main > section .article section .tickettask section .split {
     max-width: calc((100% - 30px) / 2);
