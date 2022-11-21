@@ -10770,9 +10770,6 @@ main > section aside ul li .dashboard img {
   max-height: 24px;
   max-width: 24px;
 }
-main > section aside ul li .dashboard h3, main > section aside ul li .dashboard .h3 {
-  display: none;
-}
 main > section aside .navlist {
   padding: 16px 0;
 }
@@ -10798,15 +10795,9 @@ main > section .article section .overview section img {
   max-height: 16px;
   margin-left: 14px;
 }
-main > section .article section .overview section img:nth-child(2) {
-  display: none;
-}
 main > section .article section .overview section img:last-child {
   max-width: 44px;
   max-height: 44px;
-}
-main > section .article section .overview section h5, main > section .article section .overview section .h5 {
-  display: none;
 }
 main > section .article section .numbers {
   cursor: pointer;
@@ -10855,9 +10846,6 @@ main > section .article section .chart section section section h3, main > sectio
 main > section .article section .chart section section section h6, main > section .article section .chart section section section .h6 {
   padding: 8px 16px 0;
   letter-spacing: 0.1px;
-}
-main > section .article section .chart section section section img {
-  max-width: 100%;
 }
 main > section .article section .chart section section section img:first-child {
   max-width: 80%;
@@ -10930,9 +10918,6 @@ main > section .article section .tickettask section .split section .color-green 
 }
 
 @media only screen and (min-width: 576px) {
-  main > section .article section .overview section img:nth-child(2) {
-    display: block;
-  }
   main > section .article section .numbers section section {
     max-width: calc((100% - 50px) / 4);
   }
@@ -10961,7 +10946,6 @@ main > section .article section .tickettask section .split section .color-green 
     max-width: 32px;
   }
   main > section aside ul li .dashboard h3, main > section aside ul li .dashboard .h3 {
-    display: block;
     font-weight: 700;
     letter-spacing: 0.4px;
   }
@@ -10985,7 +10969,6 @@ main > section .article section .tickettask section .split section .color-green 
     margin-left: 14px;
   }
   main > section .article section .overview section h5, main > section .article section .overview section .h5 {
-    display: block;
     padding: 7px 0 7px 32px;
     margin-left: 32px;
     font-weight: 600;

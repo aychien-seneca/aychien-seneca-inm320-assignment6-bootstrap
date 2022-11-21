@@ -61,9 +61,6 @@ main {
                             max-height: 24px;
                             max-width: 24px;
                         }
-                        h3{
-                            display:none;
-                        }
                     }
                 }
             }
@@ -101,16 +98,10 @@ main {
                             max-width: 16px;
                             max-height:16px;
                             margin-left: 14px;
-                            &:nth-child(2){
-                            display:none;
-                            }
                             &:last-child {
                             max-width: 44px;
                             max-height:44px;
                             }
-                        }
-                        h5{
-                            display: none;
                         }
                     }
                 }
@@ -176,7 +167,6 @@ main {
                                 }
                                 // graph img
                                 img{
-                                    max-width: 100%;
                                     &:first-child{
                                         max-width:80%;
                                     }
@@ -275,15 +265,6 @@ main {
             // overview content - exluding the side navigation
             .article{
                 section{
-                    // header - overview + search + notification + profile name + profile
-                    .overview {
-                        // search + notification + profile name + profile
-                        section{
-                            img:nth-child(2){
-                                display:block;
-                            }
-                        }
-                    }
                     // unresolved + overdue + open + on hold
                     .numbers {
                         section{
@@ -336,7 +317,6 @@ main {
                                 max-width: 32px;
                             }
                             h3{
-                                display:block;
                                 font-weight:$font-weight-bold;
                                 letter-spacing: $letter-spacing-04;
                             }
@@ -376,7 +356,6 @@ main {
                                 }
                             }
                             h5{
-                                display: block;
                                 padding: 7px 0 7px 32px;
                                 margin-left:32px;
                                 font-weight: $font-weight-semibold;
